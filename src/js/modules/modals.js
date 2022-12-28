@@ -27,6 +27,14 @@ const modals = () => {
                 document.body.style.overflow = '';
             }
         });
+
+        document.addEventListener('keydown', (e) => {
+            if(e.code === 'Escape' && modal.style.display == 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+
     }
 
     function showByModalTime(selector, time) {
